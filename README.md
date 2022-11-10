@@ -1,4 +1,4 @@
-![lendinglogo](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/LendingClubLogo2.png)
+Credit Risk Analysis
 
 An analysis using Machine Learning algorithms to identify credit card risk using a dataset from LendingClub.
 
@@ -14,11 +14,11 @@ As mentioned in the overview, we use `Machine Learning` to resample the dataset 
 
 The original dataset contained 115,675 loan applications in Q1 of 2019. We used the "loan status" to determine whether the application was considered "low" or "high" risk. Applications that had "current" as the "loan status" were classified as "low risk" and the remaining as "high risk". This reduced the dataset to 68,817 total applications with 99% classified as "low risk". 
 
-![datacount](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/datacount.png)
+![datacount](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/datacount.png)
 
 Using the 75/25% method to split the data for training vs. testing, 51,366 "low risk" and 246 "high risk" applications were categorized into the training set.   
 
-![trainingdata](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/trainingdata.png)
+![trainingdata](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/trainingdata.png)
 
 ## Deliverable 1: Use Resampling Models to Predict Credit Risk
 
@@ -26,48 +26,48 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
 **`RandomOverSampler Model`** randomly selects from the minority class and adds it to the training set until both classifications are equal. The results classified 51,366 records each as High Risk and Low Risk.
 
-![oversamplecount](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/oversamplecount.png)
+![oversamplecount](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/oversamplecount.png)
 
   * Balanced accuracy score: 64%.
 
-  ![oversampleacc](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/oversampleacc.png)
+  ![oversampleacc](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/oversampleacc.png)
 
   * The "High Risk" precision rate was only 1% with the recall at 66% giving this model an F1 score of 2%.
   * "Low Risk" had a precision rate of 100% and recall at 62%.  
   
-  ![oversamplecm](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/oversamplecm.png)
+  ![oversamplecm](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/oversamplecm.png)
   
-  ![oversampleclass](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/oversampleclass.png)
+  ![oversampleclass](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/oversampleclass.png)
 
 **`SMOTE (Synthetic Minority Oversampling Technique) Model`**, like `RandomOverSampler` increases the size of the minority class by creating new values based on the value of the closest neighbors to the minority class instead of random selection. 
 
   * The balanced accuracy score improved slightly to 65.1%.
 
-  ![smoteacc](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/Smoteacc.png)
+  ![smoteacc](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/Smoteacc.png)
 
   * Like `RandomOverSampler`, the "High Risk" precision rate again was only 1% with the recall degraded to 61% giving this model an F1 score of 2%.
   * "Low Risk" had a precision rate of 100% and an improved recall at 69%.  
 
-  ![smotecm](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/SmoteCM.png)
+  ![smotecm](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/SmoteCM.png)
   
-  ![smoteclass](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/SmoteClass.png)
+  ![smoteclass](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/SmoteClass.png)
 
 ### Undersampling
 
 **`ClusterCentroids Model`**, an algorithm that identifies clusters of the majority class to generate synthetic data points that are representative of the clusters. The model classified 246 records each as High Risk and Low Risk.
 
-![undersamplecount](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/undersamplecount.png)
+![undersamplecount](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/undersamplecount.png)
 
   * Balanced accuracy score was lower than the oversampling models at 54.5%.
 
-  ![underacc](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/underacc.png)
+  ![underacc](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/underacc.png)
 
   * The "High Risk" precision rate again was only at 1% with the recall at 69% giving this model an F1 score of 1%.
   * "Low Risk" had a precision rate of 100% and with a lower recall at 40% compared to the oversampling models.  
 
-  ![undercm](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/undercm.png)
+  ![undercm](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/undercm.png)
   
-  ![underclass](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/underclass.png)
+  ![underclass](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/underclass.png)
 
 ## Deliverable 2: Use the SMOTEENN algorithm to Predict Credit Risk
 
@@ -75,53 +75,53 @@ Using the 75/25% method to split the data for training vs. testing, 51,366 "low 
 
 **`SMOTEENN (Synthetic Minority Oversampling Technique + Edited NearestNeighbors) Model`** combines aspects of both oversampling and undersampling. The model classified 68,460 records as High Risk and 62,011 as Low Risk.
 
-![SMOTEENNcount](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/SMOTEENNcount.png)
+![SMOTEENNcount](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/SMOTEENNcount.png)
 
   * The balanced accuracy score improved to 64.5% when using a combined sampling model.
 
-  ![SMOTEENNacc](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/SMOTEENNacc.png)
+  ![SMOTEENNacc](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/SMOTEENNacc.png)
 
   * The "High Risk" precision rate did not improve was only 1%, however the recall increased to 72% giving this model an F1 score of 2%.
   * "Low Risk" still showed a precision rate of 100% with the recall at 57%.  
   
-  ![SMOTEENNcm](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/SMOTEENNcm.png)
+  ![SMOTEENNcm](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/SMOTEENNcm.png)
 
-  ![SMOTEENNclass](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/SMOTEENNclass.png)
+  ![SMOTEENNclass](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/SMOTEENNclass.png)
 
 ## Deliverable 3: Use Ensemble Classifiers to Predict Credit Risk
 
 Compare two new `Machine Learning` models that reduce bias to predict credit risk. The models classified 51,366 as High Risk and 246 as Low Risk.
 
-![Balancedcount](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/balancedcount.png)
+![Balancedcount](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/balancedcount.png)
 
 **`BalancedRandomForestClassifier Model`**, two trees of the same size and equal size to the minority class are constructed to represent one for the majority class and one for the minority class. 
 
   * The balanced accuracy score increased to 78.9% for this model.
 
-  ![balanceacc](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/Balancedacc.png)
+  ![balanceacc](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/Balancedacc.png)
 
   * The "High Risk precision rate increased to 3% with the recall at 70% giving this model an F1 score of 6%.
   * "Low Risk" still had a precision rate of 100% with the recall at 87%.  
   * The top feature by importance was "total_rec_prncp" at 7.9% of the total.
 
-  ![balancecm](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/Balancedcm.png)
+  ![balancecm](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/Balancedcm.png)
   
-  ![balanceclass](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/balancedclass.png)
+  ![balanceclass](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/balancedclass.png)
 
-  ![balancefeature](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/BalancedFeature.png) 
+  ![balancefeature](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/BalancedFeature.png) 
 
 **`EasyEnsembleClassifier Model`**, a set of classifiers where individual decisions are combined to classify new examples.
 
   * The balanced accuracy score increased to 93.2% with this model.
 
-  ![easyeacc](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/Easyacc.png)
+  ![easyeacc](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/Easyacc.png)
 
   * The "High Risk precision rate increased to 9% with the recall at 92% giving this model an F1 score of 16%.
   * "Low Risk" still had a precision rate of 100% with the recall now at 94%.  
 
-  ![easycm](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/Easycm.png)
+  ![easycm](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/Easycm.png)
   
-  ![easyclass](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Images/Easyclass.png)
+  ![easyclass](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Images/Easyclass.png)
 
 # Summary
 
@@ -139,5 +139,5 @@ A side note that should be considered is that original dataset had 99% of the ap
 
 # Resources
 
-* Dataset from LendingClub: [LoanStats_2019Q1](https://github.com/amylio/Credit_Risk_Analysis/blob/main/Resources/LoanStats_2019Q1.csv)
+* Dataset from LendingClub: [LoanStats_2019Q1](https://github.com/ayaakoub/Credit_Risk_Analysis/blob/main/Resources/LoanStats_2019Q1.csv)
 * Software: Python 3.7.9, Anaconda 4.9.2 and Jupyter Notebooks 6.1.4
